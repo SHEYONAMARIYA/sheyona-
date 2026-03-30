@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheyona Mariya | Portfolio</title>
+    <!-- Importing a professional font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #55185D;
+            --secondary-color: #FFD524;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e5e7eb;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Projects Section */
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-links {
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            margin: 0 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            background: var(--text-dark);
+            color: var(--white);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SM.</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Sheyona Mariya</h1>
+        <p>First year Electronics and Communication Engineering student at Vimal Jyothi Engineering College, Chemperi.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm Sheyona, an aspiring engineer with a fascination for how the world is connected through circuits and communication systems. Currently navigating my first year at Vimal Jyothi Engineering College, I am deeply interested in exploring the intersection of hardware and software.</p>
+                <br>
+                <p>Beyond the lab, I am a curious learner who enjoys tackling logical puzzles and staying updated with emerging technologies. My goal is to leverage my education in ECE to design sustainable and efficient electronic solutions that can improve daily lives. I believe that engineering is not just about wires and components, but about building bridges between imagination and reality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: #f3f4f6;">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>C, Basic Python</p>
+            </div>
+            <div class="skill-card">
+                <h3>Circuit Design</h3>
+                <p>Basic Electronics</p>
+            </div>
+            <div class="skill-card">
+                <h3>Web Dev</h3>
+                <p>HTML & CSS</p>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <p>Problem Solving</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Academic Interests</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Digital Electronics</h3>
+                    <p>Exploring the fundamentals of logic gates, flip-flops, and digital system design during my first year curriculum.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Embedded Systems</h3>
+                    <p>An area I am excited to explore further, focusing on microcontrollers and real-time processing applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Information</h2>
+        <p>Interested in collaborating or just want to say hi? Feel free to reach out!</p>
+        <a href="mail_to:mariyasheyona@gmail.com" class="btn">Send an Email</a>
+        
+        <div class="contact-links">
+            <a href=https://www.linkedin.com/in/sheyona-mariya-8a5a62376?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+ target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+     <div class=”info-item”>
+        <h4>Phone</>
+        <p><ahref=”tel:8281081806”>8281081806</a></p>
+      </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sheyona Mariya. Designed for FOC Assignment 2.</p>
+    </footer>
+
+</body>
+</html>
+
